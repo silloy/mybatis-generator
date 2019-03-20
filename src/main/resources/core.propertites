@@ -1,0 +1,6 @@
+jdbc.driverLocation=/Users/shaohuasu/.m2/repository/mysql/mysql-connector-java/8.0.12/mysql-connector-java-8.0.12.jar
+jdbc.driverClass=com.mysql.cj.jdbc.Driver
+jdbc.connectionURL=jdbc:mysql://xxxx:3306/xxx?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false
+jdbc.userId=xx
+jdbc.password=xx
+generator.basePackage=xx.xx
