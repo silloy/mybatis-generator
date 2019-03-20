@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class Executor {
     public static void main(String[] args) throws Exception {
-        List<String> warnings = new ArrayList<String>();
+        List<String> warnings = new ArrayList<>();
         boolean overwrite = true;
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config =

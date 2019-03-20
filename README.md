@@ -47,3 +47,6 @@ generatorConfig.xml增加
 ```
 
 并通过Executor.java执行生成, 普通orm还是通过  `mvn mybatis-generator:generate -e -X` 执行
+
+报错： [ERROR] Failed to execute goal org.mybatis.generator:mybatis-generator-maven-plugin:1.3.7:generate (default-cli) on project mybatis-generator: Execution default-cli of goal org.mybatis.generator:mybatis-generator-maven-plugin:1.3.7:generate failed: Cannot instantiate object of type me.silloy.plugins.LombokPlugin -> [Help 1]
+解决：执行 `mvn package install`
