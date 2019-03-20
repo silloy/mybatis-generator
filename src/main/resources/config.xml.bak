@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="mysql-connector-java-5.1.6-bin.jar" />
+
+	<context id="MysqlTables" targetRuntime="MyBatis3">
+
+		<!-- 注释 -->
+		<commentGenerator>
+			<property name="suppressAllComments" value="true"/><!-- 是否取消注释 -->
+			<property name="suppressDate" value="true" /><!-- 是否生成注释代时间戳--> 
+		</commentGenerator>
+
+		<!-- jdbc连接 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://10.46.74.95:3306/hmcdss2" userId="enginer" password="dataisbest">
+		</jdbcConnection>
+
+		<!-- 类型转换 -->
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- 生成实体类地址 -->
+		<javaModelGenerator targetPackage="com.hm.uums.module.log.model" targetProject="src">
+			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
+			<property name="enableSubPackages" value="true" />
+			<!-- 是否针对string类型的字段在set的时候进行trim调用 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		
+		<!-- 生成mapxml文件 -->
+		<sqlMapGenerator targetPackage="com.hm.uums.module.log.mapping" targetProject="src">
+			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<!-- 生成mapxml对应client，也就是接口dao -->
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.hm.uums.module.log.dao" targetProject="src">
+			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!--<table tableName="pet" domainObjectName="Pet"></table>-->
+		<table tableName="user_login_log" domainObjectName="UserLoginLog" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<!--
+		<table tableName="drug_batch_instock" domainObjectName="DrugBatchInstock" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table tableName="batch_instock" domainObjectName="BatchInstock" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		
+		<table tableName="order_drug_batch" domainObjectName="OrderDrugBatch" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		
+		<table tableName="drug_inventory" domainObjectName="DrugInventory" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		
+		<table tableName="hospital_config" domainObjectName="HospitalConfig" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		-->
+		<!--
+		<table tableName="ORGANIZE" domainObjectName="Organize" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		
+		<table tableName="RESOURCE_APPOINT" domainObjectName="ResourceAppoint" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		
+		<table tableName="SERVER_USER" domainObjectName="ServerUser" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		
+		<table tableName="USER_TASK" domainObjectName="UserTask" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		-->
+	</context>
+</generatorConfiguration>
+
